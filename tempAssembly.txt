@@ -1,0 +1,36 @@
+	call PrintString
+	call GetAnInteger
+	mov ax, [ReadInt]
+	mov [a], ax
+	call PrintString
+	call GetAnInteger
+	mov ax, [ReadInt]
+	mov [b], ax
+	call PrintString
+	call GetAnInteger
+	mov ax, [ReadInt]
+	mov [c], ax
+	mov ax, [a]
+	cmp ax, [b]
+	JLE L1
+	mov ax, [a]
+	cmp ax, [c]
+	JLE L2
+L2:	nop
+L2:	nop
+	mov ax, [b]
+	cmp ax, [a]
+	JLE L3
+	mov ax, [b]
+	cmp ax, [c]
+	JLE L4
+L4:	nop
+L4:	nop
+	mov ax, [c]
+	cmp ax, [a]
+	JLE L5
+	mov ax, [c]
+	cmp ax, [b]
+	JLE L6
+L6:	nop
+L6:	nop

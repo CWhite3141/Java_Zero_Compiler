@@ -1,0 +1,19 @@
+	T1		RESW	1
+	T2		RESW	1
+	T3		RESW	1
+	T4		RESW	1
+	T5		RESW	1
+	T6		RESW	1
+	T7		RESW	1
+	T8		RESW	1
+	T9		RESW	1
+	T10		RESW	1
+
+
+	;Start program code.
+section .text	
+	global main 
+;start address (main)for elf linker (extended linking format)
+main:	nop
+	; prompt user for positive number	
+Again:

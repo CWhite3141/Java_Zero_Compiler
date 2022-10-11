@@ -1,0 +1,18 @@
+;.bss RESB 1 – byte, RESW 1 – 2 bytes
+; RESD 1 – 4 bytes, RESQ 1 - 8 bytes 
+;W word, D double, Q quad
+; Start of user variable area    ----------
+
+section	.bss	;used to declare uninitialized variables
+
+	TempChar        RESB    1
+	;1 byte temp space	
+	; for use by GetNextChar
+	testchar        RESB    1	
+	;Temporary storage GetAnInteger.	
+	ReadInt         RESW    1 
+	;2 bytes
+	;Used in converting to base ten.
+	tempint         RESW	1              
+	negflag         RESB    1              
+	;P=positive, N=negative	

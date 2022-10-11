@@ -1,0 +1,28 @@
+sys_exit	equ	1
+sys_read	equ	3
+sys_write	equ	4
+stdin		equ	0 ; default keyboard | I/O redirection
+stdout		equ	1 ; default terminal screen
+stderr		equ	3
+
+
+section .data	;used to declare constants	
+	userMsg		db 'Enter an integer(less than 32,765): '
+	lenUserMsg	equ	$-userMsg
+	displayMsg	db	'You entered: '
+	lenDisplayMsg	equ	$-displayMsg
+	newline		db	0xA 	; 0xA 0xD is ASCII <LF><CR>
+
+	Ten        DW      10  ;Used converting to base ten.
+	;printTempchar	 db	'Tempchar = : '
+	;lenprintTempchar	equ 	$-printTempchar
+
+
+	Result          db 'Ans = '
+	ResultValue		 db	'aaaaa'
+	db	 0xA		;return
+	ResultEnd       equ 	$-Result   
+	; $=> here - address Result = length to print
+
+	num			times 6	 db 'ABCDEF' ;cheat NASM
+	numEnd		equ	$-num
